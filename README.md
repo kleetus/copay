@@ -177,27 +177,35 @@ Copay depends on [Bitcore Wallet Service](https://github.com/bitpay/bitcore-wall
 
 ## Hardware Wallet Support
 
-Copay supports Ledger and Trezor hardware wallets. The support is only available only on Chrome App. Ledger supports is only aviable on multisig wallets,  Trezor, both in multisig and non-multisig wallets.
+Copay supports Ledger and Trezor hardware wallets. The support is only available only on the Chrome App. Ledger support is only available on multisig wallets. Trezor supports both multisig and non-multisig wallets.
 
-To create or join a wallet using a hardware device go to 
+To create a wallet using a hardware device go to the menu bar on the left side of the screen:
 
-  Add Wallet -> Create or Join -> Advanced options -> Wallet Seed -> select Trezor or Ledger
-  
-Both devices support multiple accounts, so you can use then for multiple wallets. Select the account and the click on create or join.
+  Add Wallet (create, join or import) -> Create New Wallet
+
+Then you choose either Personal Wallet or Shared Wallet. A shared wallet would be with another Copay wallet:
+
+  Show Advanced options -> Wallet Seed -> select Trezor or Ledger
+
+Both devices support multiple accounts, so you can use them for multiple wallets. Select the account and the click on Create New Wallet.
+
+To join a shared wallet, you must have already created a shared wallet in Copay. Also, you must have an invitation code that looks similar to:
+
+Ft6jJ48vjdN1xaeDnZn8byL1RW2LZhW8ZqQyMj5HXiJ7VH93LdEoVtieKGYDKDnmjGRwjCoABCFS
 
 It is also possible to import an wallet from a device using:
   Add Wallet -> Import -> Hardware wallet
- 
-Here it is also necesary to select the account number.
 
-When creating or joining a wallet, Copay will ask for two public keys for the device. One public keys is used for the wallet itself and the other is used as entropy source to create a private / public key pair for signing request to the Wallet Service.
+It is also necessary to select the account number.
 
-Everytime you need to sign a transaction, the device will be needed to performe the signature. Follow the screen instructions after clicking the `send` or `accept` buttons.
+When creating or joining a wallet, Copay will ask for two public keys for the device. One public key is used for the wallet itself and the other is used as an entropy source to create a private / public key pair for signing requests to the Wallet Service.
 
-Finally, in case you loose the device and you have the 24 words seed for the device, you can recover access to your funds using Copay, see: https://github.com/bitpay/copay/blob/master/backupRecovery.md#hardware-wallets
+Every time you need to sign a transaction, the device will be needed to perform the signature. Follow the screen instructions after clicking the `send` or `accept` buttons.
 
- 
- 
+Finally, in case you lose the device and you have the 24-word seed for the device, you can recover access to your funds using Copay, see: https://github.com/bitpay/copay/blob/master/backupRecovery.md#hardware-wallets
+
+
+
 
 ## Translations
 Copay uses standard gettext PO files for translations and [Crowdin](https://crowdin.com/project/copay) as the front-end tool for translators.  To join our team of translators, please create an account at [Crowdin](https://crowdin.com) and translate the Copay documentation and application text into your native language.
